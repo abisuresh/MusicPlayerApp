@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {render} from "react-dom"
+import Box from "./Box.js"
 
 class App extends Component{
     constructor(props){
@@ -40,7 +41,8 @@ class App extends Component{
                      <li key={song.id}>
                          {song.name} - {song.artist}
                      </li>
-                         "TEST"
+                         
+                    <Box/>
                      </div>
                  )
              })}
