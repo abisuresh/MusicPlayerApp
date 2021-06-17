@@ -33,10 +33,15 @@ class App extends Component{
 
     render(){
         return (
-            <div>
-                <h1>Test</h1>
-                <p>{Song.name}</p>
-            </div>
+         <ul>
+             {this.state.data.map(song => {
+                 return (
+                     <li key={song.id}>
+                         {song.name} - {song.artist}
+                     </li>
+                 )
+             })}
+         </ul>
         )
     }
 }
