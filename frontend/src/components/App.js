@@ -36,9 +36,12 @@ class App extends Component{
          <ul>
              {this.state.data.map(song => {
                  return (
+                     <div style={{backgroundColor: 'green'}}>
                      <li key={song.id}>
                          {song.name} - {song.artist}
                      </li>
+                         "TEST"
+                     </div>
                  )
              })}
          </ul>
