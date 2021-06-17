@@ -2,6 +2,9 @@ import React, {Component} from "react";
 import {render} from "react-dom"
 import CustomBox from "./Box.js"
 import Button from '@material-ui/core/Button';
+import TestBox from "./Description";
+import Container from '@material-ui/core/Container';
+import ReactAudioPlayer from "react-audio-player";
 
 class App extends Component {
     constructor(props) {
@@ -38,18 +41,13 @@ class App extends Component {
             <ul>
                 {this.state.data.map(song => {
                     return (
-                        <div style={{backgroundColor: 'green'}}>
-                            <li key={song.id}>
+                        <div style={{backgroundColor: 'black'}}>
+                            <TestBox/>
+                            <li key={song.id} style={{color: 'white'}}>
                                 {song.name} - {song.artist}
                             </li>
-                            <div className="test">
-                                <CustomBox/>
 
-                                <Button color="primary">
-                                    Exit
-                                </Button>
-                            </div>
-
+                            <ReactAudioPlayer src="" autoPlay="false" controls ="true" />
 
                         </div>
                     )

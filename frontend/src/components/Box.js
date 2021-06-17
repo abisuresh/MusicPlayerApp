@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import {render} from "react-dom"
 import App from "./App";
 import Box from '@material-ui/core/Box';
+import Button from "@material-ui/core/Button";
 
 class CustomBox extends Component {
     constructor(props) {
@@ -10,14 +11,10 @@ class CustomBox extends Component {
     }
 
     render() {
-        return <div><Box sx={{
-            width: 300, height: 300, bgcolor: 'primary.dark', '&:hover': {
-                backgroundColor: 'primary.main',
-                opacity: [0.8, 0.9, 0.8],
-            },
-        }}
-        />
-        </div>
+        return <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
+      <Button style={{color: 'blue'}}>PLAY</Button>
+    </Box>
+
     }
 }
 
